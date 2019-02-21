@@ -1,0 +1,360 @@
+/* ---- reset ---- */
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* ---- typography ---- */
+  
+  body {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 147%;
+  }
+  
+  h1 {
+    font-family: 'Domine', serif;
+    font-weight: 300;
+    font-size: 0.2em;
+    color:white;
+    padding: 80px 0;
+    text-align: center;
+    line-height: 100%;
+    max-width: 70%;
+  }
+  
+  h2 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+  }
+  
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+  }
+  
+  /* ---- layout ---- */
+  
+  footer{
+    text-align: center;
+    padding: 30px 0;
+  }
+  
+  .container {
+    margin: 0 auto;
+    max-width: 960px;
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  section:nth-of-type(even){
+    background: rosybrown;
+  }
+  
+  .main-footer {
+    color: black;
+    padding: 60px 0;
+    background: #111;
+  }
+  
+  /* ---- components ---- */
+  
+  .contact-btn{
+    background: red;
+    padding: 30px;
+    margin-bottom: 200px;
+    color: white;
+    display: inline-block;
+  }
+  
+  .btn{
+  display: inline-block;
+  background: orangered;
+  padding: 2em;
+  color: black;
+  font-weight: 500;
+  border-radius: 10px;  
+  transition: all .5s ease-in-out;
+  animation-name: blink;
+  animation-duration: .8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  }
+  
+  .btn:hover{
+    background: grey;
+    border-radius: 30px; 
+    transition: all .5s ease-in-out;
+  
+  }
+  
+  /* ---- banner ---- */
+  
+  .banner{
+  height: 100vh;
+  background: url(../imgs/hero.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  }
+  
+  .banner h1{
+    font-family: 'Domine', serif;
+    font-weight: 300;
+    font-size: 2em;
+    margin-bottom: 5px;
+    line-height: 1.2em;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-delay: 1s;
+  }
+  
+  /* .banner h1, .banner h2{
+    opacity: 1;
+    transition: opacity 2s ease-in;
+  } */
+  
+  /* ---- portfolio section ---- */
+  
+  .flex-list {
+    display: flex; 
+    flex-wrap: wrap; 
+    height: 100%;
+    width: 100%;
+  }
+  .flex-list li {
+    position: relative;
+  }
+  .portfolio-title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+    margin-top: -50px;
+    transform: translate(-50% -50%);
+  }
+  
+  /* ---- section ---- */
+  
+  #portfolio{
+    height: 500px;
+  }
+
+  .inline-list li{
+      display: inline-block;
+  }
+  
+  .portfolio__list li{
+      width: 20%;
+  }
+  
+  .section-intro{
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto 30px auto; 
+  }
+
+.flex-list li {
+  width: 50%;
+  height: 50%;
+}
+
+  .projectLinks{
+    background-image: url(https://media.giphy.com/media/QM1rrJwG8TJKw/giphy.gif);
+    background-repeat: 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  .videos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .videoWrapper {
+    width: 100%;
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+  }
+  
+  .videoWrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  }
+  
+  /* ---- header ---- */
+  
+  .page-header h1{
+      font-size: 1.7em;
+  }
+  
+  .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  }
+  
+  .page-header a{
+  color: red;
+  padding: 20px 10px;
+  transition: all .3s ease-in-out;
+  
+  }
+  
+  .fa-linkedin:before {
+    content: "\f08c";
+    padding: 5px;
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+  
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px)
+  {
+    .portfolio_list li{
+      width: 50%;
+    }
+  
+    .flex-list li {
+    }
+    
+    .section-intro{
+      max-width: 50%;
+    
+    }
+    .videos .container{
+    width: 500px;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+  
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+  
+  }
+  
+  a{
+      color: black;
+      text-decoration: none;
+      text-decoration-style: double;
+  }
+  
+  img:hover{
+      opacity: .7;
+      -moz-box-shadow:    2px -1px 12px 0px #000;
+      -webkit-box-shadow: 2px -1px 12px 0px #000;
+      box-shadow:         2px -1px 12px 0px #000;
+    }
+  
+  .page-header a{
+      color:white;
+  }
+  
+  .page-header a:hover{
+      color:black;
+  }
+  
+  .main-navigation ul li{
+      display: inline-block;
+  }
+  
+  img{
+      max-width: 100%;
+  }
+  
+  body { 
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+  }
+  
+  /* ---- animations functions ---- */
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;   
+    }
+  }
+  
+  @keyframe bounce {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+  }
+
+  /* ---- links section ---- */
+
+  #linksSection {
+    display: flex;
+    justify-content: center;
+}
+
+  #linksSection h3{
+    text-decoration: underline;
+    
+  }
+
